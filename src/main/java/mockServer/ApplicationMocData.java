@@ -14,7 +14,6 @@ import static com.github.tomakehurst.wiremock.client.WireMock.*;
  * Class is responsible for setting up and managing mock data for different applications.
  */
 public class ApplicationMocData {
-
     private WireMockServer wireMockServer;
 
     /**
