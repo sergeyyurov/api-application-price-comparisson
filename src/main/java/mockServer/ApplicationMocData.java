@@ -42,14 +42,14 @@ public class ApplicationMocData {
      */
     private void templateMockApplicationData(ApplicationData applicationType, Map<String, Double> products) {
         String domain = applicationType.getDomainName();
-        String applicationName;
+        String itemName;
         double productPrice;
 
         for (Map.Entry<String, Double> entry : products.entrySet()) {
-            applicationName = entry.getKey();
+            itemName = entry.getKey();
             productPrice = entry.getValue();
 
-            stubFor(get(urlEqualTo("/" + domain + "/product/" + applicationName))
+            stubFor(get(urlEqualTo("/" + domain + "/product/" + itemName))
                     .willReturn(aResponse()
                             .withStatus(200)
                             .withHeader("Content-Type", "application/json")
